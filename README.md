@@ -143,7 +143,7 @@ As this protocol is designed to be as secure as possible, using an old encryptio
 
 ### Sealed Messaging System
 
-Zyphor implements a novel mailbox system that allows users to send and receive messages anonymously. Key features include:
+Zyphor implements a novel mailbox system that allows users to send and receive messages anonymously. [https://zyphor-sealed.netlify.app/](https://zyphor-sealed.netlify.app/) demonstrates the way this system works. Key features include:
 
 -   **Anonymous Mailboxes**: Users can create and manage mailboxes without revealing their identity.
     
@@ -151,7 +151,7 @@ Zyphor implements a novel mailbox system that allows users to send and receive m
     
 -   **Rotating Mailboxes**: Mailbox addresses can be changed periodically to enhance privacy.
 
-All mailboxes are unique and not bound to a user itself. There is also no way to check if a mailbox is registered to a user. Mailboxes can change at any given time.
+All mailboxes are unique and not bound to a user itself. There is also no way to check if a mailbox is registered to a user. Mailboxes can change at any given time. 
 
 <details>
   <summary>Show protocoll</summary>
