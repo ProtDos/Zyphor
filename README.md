@@ -1,4 +1,5 @@
 
+
 # Zyphor: Quantum-Safe Anonymous Chat Protocol
 
 Zyphor is a new cutting-edge, open-source chat protocol designed to provide **end-to-end encryption**, **metadata protection**, and **quantum-safe security** for all types of communication. It focuses on maintaining **full anonymity** for users while ensuring that all transmitted data remains secure, private, and protected against future computational threats. 
@@ -14,10 +15,11 @@ Zyphor is a new cutting-edge, open-source chat protocol designed to provide **en
 5. [Installation](#installation)
 6. [Technical Details](#technical-details)
 7. [Implementation](#implementation)
-8. [License](#license)
-9. [Roadmap](#roadmap)
-10. [FAQ](#faq)
-11. [Contact](#contact)
+8. [Threat Model](#thread-model)
+9. [License](#license)
+10. [Roadmap](#roadmap)
+11. [FAQ](#faq)
+12. [Contact](#contact)
 
 ---
 
@@ -188,6 +190,48 @@ We welcome contributions! If you'd like to help make Zyphor better, here's how y
 5. Create a new pull request.
 
 Before contributing, please review the [Contributing Guide](CONTRIBUTING.md) for detailed instructions on submitting issues, feature requests, and code changes.
+
+---
+
+## Thread Model
+
+### Intended Audience
+
+Zyphor is designed for individuals and organizations that prioritize secure, anonymous communication. The protocol is ideal for:
+- Privacy-conscious users who want to protect their conversations from surveillance.
+- Whistleblowers, journalists, and activists who need strong anonymity.
+- Developers and researchers working on secure messaging systems.
+- Any user concerned about post-quantum security and metadata protection.
+- Companies wanting to secure their traffic
+- Schools or other institutions
+
+### Possible Threat Actors
+
+Zyphor is built to defend against a range of potential attackers, including:
+- **Network Adversaries (ISPs, Governments, and Mass Surveillance Programs)**: Attempt to monitor or intercept communication by analyzing network traffic.
+- **Malicious Server Operators**: The centralized nature of Zyphor means server operators have some visibility, but protections are in place to limit metadata leakage.
+- **Man-in-the-Middle (MitM) Attackers**: Attempt to intercept or modify messages between sender and recipient.
+- **Malicious Users**: Individuals attempting to spam, impersonate, or deanonymize other users.
+- **Quantum Adversaries**: Attackers with access to future quantum computing resources capable of breaking traditional encryption.
+
+### What an Attacker Can See
+
+- **That a message was sent**: While the contents remain encrypted, an attacker could observe that communication is occurring.
+- **Username-based Identifiers**: A malicious server owner could see every registered username and last request this user has done authenticated. This does not include messages sent, but rather just blinding the key or initiating a conversation, as the sealed messaging systems hides those identifiers.
+
+#### Trusting the central server
+Users can trust the server as all data linked to it is anonymized and no personal data is stored whatsoever. Like stated above even a compromised server wouldn't compromise a user in any way.
+
+
+### What an Attacker Cannot See
+
+- **Message Contents**: All communications are end-to-end encrypted using Kyber-1024 and AES-256, making decryption infeasible. Attackers also can't assign a message sent to a user.
+- **Sender and Receiver Identities**: The Sealed Messaging System ensures that the actual sender and recipient are unknown to any external observer.
+- **Conversation Links**: Due to metadata obfuscation and padding, it's impossible to determine who is communicating with whom based on message flow.
+- **Long-term Message Correlation**: Perfect Forward Secrecy (PFS) ensures that even if one session key is compromised, past messages remain secure.
+- **IP-Addresses**: The usage of the Tor-network ensures the anonymity of users by hiding their IP-address over multiple layers.
+
+
 
 ---
 
