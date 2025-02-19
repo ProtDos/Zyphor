@@ -1,0 +1,4 @@
+cryptography
+colorama
+flask
+flask-cors

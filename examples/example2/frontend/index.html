@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat App Demonstration</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<body>
+    <h1 class="title">JuFo 2025</h1>
+    <div class="container">
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="avatar">A</div>
+                <div>
+                    <div class="chat-name">Alice</div>
+                    <div class="chat-status">Online</div>
+                </div>
+            </div>
+            <div class="messages" id="alice-messages"></div>
+            <div class="input-area">
+                <input type="text" class="message-input" placeholder="Nachricht an Bob..." id="alice-input">
+            </div>
+        </div>
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="avatar">B</div>
+                <div>
+                    <div class="chat-name">Bob</div>
+                    <div class="chat-status">Online</div>
+                </div>
+            </div>
+            <div class="messages" id="bob-messages"></div>
+            <div class="input-area">
+                <input type="text" class="message-input" placeholder="Nachricht an Alice..." id="bob-input">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
