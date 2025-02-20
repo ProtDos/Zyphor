@@ -29,7 +29,7 @@ Zyphor is a new cutting-edge, open-source chat protocol designed to provide **en
 
 ## Overview
 
-Zyphor provides a robust soluiton for secure, anonymous communication in an era of increasing surveillance and digital threats. By using **quantum-safe encryption algorithms**, Zyphor ensures that your communications remain protected from both current and future cryptographic vulnerabilities.
+Zyphor provides a robust solution for secure, anonymous communication in an era of increasing surveillance and digital threats. By using **quantum-safe encryption algorithms**, Zyphor ensures that your communications remain protected from both current and future cryptographic vulnerabilities.
 
 The protocol is designed for users who prioritize **security**, **privacy**, and **metadata protection** while chatting. Zyphor’s **zero-trust architecture** ensures that no one—except the sender and recipient—can access the contents or metadata of the conversation. Zyphor is centralized, which means it needs a central server to forward messages to the intendent recipient. Below is an overview what the server owner or intruders could theoretically see.
 
