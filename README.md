@@ -2,6 +2,10 @@
 
 Zyphor is a new cutting-edge, open-source chat protocol designed to provide **end-to-end encryption**, **metadata protection**, and **quantum-safe security** for all types of communication. It focuses on maintaining **full anonymity** for users while ensuring that all transmitted data remains secure, private, and protected against future computational threats.
 
+> [!CAUTION]
+> This is just a protocol I have designed myself. It does not have any official security audits whatsoever. Use with caution and not in production development (yet).
+
+
 ---
 
 ## Table of contents
